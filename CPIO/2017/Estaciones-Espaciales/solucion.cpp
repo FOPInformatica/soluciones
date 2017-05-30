@@ -3,6 +3,7 @@
  * https://omegaup.com/arena/problem/Estaciones-Espaciales#problems
  * Si representamos una estacion como un vertice de un grafo, y los tuneles que las conectan como una 
  * arista del grafo, entonces necesitamos encontrar el tamano de la menor covertura por vertices.
+ * El hecho que exista solo un camino entre dos vertices hace que el grafo sea un arbol.
  */
 #include <iostream>
 #include <vector>

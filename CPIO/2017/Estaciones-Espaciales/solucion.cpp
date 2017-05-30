@@ -2,7 +2,7 @@
  * C. Estaciones espaciales
  * https://omegaup.com/arena/problem/Estaciones-Espaciales#problems
  * Si representamos una estacion como un vertice de un grafo, y los tuneles que las conectan como una 
- * arista del grafo, entonces necesitamos encontrar el tamano de la covertura por vertices.
+ * arista del grafo, entonces necesitamos encontrar el tamano de la menor covertura por vertices.
  */
 #include <iostream>
 #include <vector>
@@ -12,14 +12,14 @@ using namespace std;
 int main() {
     int n;
     cin >> n;
-    vector<vector<int>> G(n);	//Matriz con los u_i
+    vector<vector<int>> G(n);	//Grafo G
     for (int i = 1; i < n; ++i) {
         int x;
         cin >> x;
         G[x - 1].push_back(i);
     }
     vector<vector<int>> DP(n, vector<int>(2));	//tabla con el numero de agentes requeridos para cada arbol
-    for (int u = n - 1; u >= 0; --u) {		//bottom-up 
+    for (int u = n - 1; u >= 0; --u) {		//iteracion bottom-up 
         int taken[] = {0, 0};
         for (int v : G[u]) {
             taken[0] += DP[v][0];

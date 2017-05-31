@@ -5,6 +5,7 @@
  * para i=n es n.
  * Por tanto, la sumatoria queda 1+1+...+1+n, donde
  * la cantidad de 1s es n-1.
+ * No olvidar usar enteros grandes para evitar desbordamiento.
  */
 
 import java.util.Scanner;

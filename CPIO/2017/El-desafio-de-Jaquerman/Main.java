@@ -12,7 +12,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        int n = (new Scanner(System.in)).nextInt();
+        long n = (new Scanner(System.in)).nextLong();
         long rpta = (n - 1) + n;  // Equivalentemente: 2 * n - 1
         System.out.println(rpta);
     }
